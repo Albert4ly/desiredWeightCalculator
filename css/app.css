@@ -1,0 +1,74 @@
+:root {
+    --wrapperCnt-bg-color: #f3efef;
+    --appCnt-bg-color:  #eeebeb;
+
+    --submitBtn-border-color: #167d32;
+    --submitBtn-bg-color: transparent;
+    --submitBtn-font-color: #167d32;
+
+    --submitBtn-bg-color-hover: #299245;
+    --submitBtn-font-color-hover: #eeebeb ;
+}
+
+.wrapperCnt {
+   display: flex;
+   justify-content: center;
+   height: 100vh;
+   background-color: var(--wrapperCnt-bg-color);
+}
+
+.appCnt {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   background-color: var(--appCnt-bg-color);
+}
+
+.appCnt__title{
+   font-size: 5vh;
+   margin-bottom: 10%;
+}
+
+/* form style */
+
+.appCnt__form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 87%;
+   position: relative;
+}
+
+.appCnt__inputRangeBlock,
+.appCnt__inputDateBlock {
+   display: flex;
+   flex-direction: column;
+   height: 7vh;
+   width:  87%;
+}
+
+.appCnt__inputRangeBlock {
+   flex-wrap: wrap;
+}
+
+.appCnt__inputInitialWeight {
+   width: 87%;
+}
+
+p {
+   margin-left: 2%;
+}
+
+.appCnt__submitBtn {
+   width: 87%;
+   height: 6vh;
+   background-color: var(--submitBtn-bg-color);
+   border: 2px solid var(--submitBtn-border-color);
+   color: var(--submitBtn-font-color);
+}
+
+.appCnt__submitBtn:hover {
+   background-color: var(--submitBtn-bg-color-hover);
+   color: var(--submitBtn-font-color-hover);
+}
