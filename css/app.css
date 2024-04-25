@@ -72,3 +72,11 @@ p {
    background-color: var(--submitBtn-bg-color-hover);
    color: var(--submitBtn-font-color-hover);
 }
+
+/* error section style */
+
+.appCnt__errorAlertSection {
+   margin: 4% 12% 3% 12%;
+   display: none;
+}
+
