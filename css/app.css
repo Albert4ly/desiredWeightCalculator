@@ -80,3 +80,9 @@ p {
    display: none;
 }
 
+/* calculations responses section style */
+
+.appCnt__calculationsResponsesSection {
+   margin-top: 6%;
+   width: 76%;
+}
