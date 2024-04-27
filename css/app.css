@@ -80,6 +80,11 @@ p {
    display: none;
 }
 
+.appCnt__errorAlertSectionDisplay {
+   margin: 4% 12% 3% 12%;
+   display: relative;
+}
+
 /* calculations responses section style */
 
 .appCnt__calculationsResponsesSection {
