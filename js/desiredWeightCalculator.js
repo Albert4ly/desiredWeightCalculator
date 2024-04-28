@@ -11,6 +11,9 @@ export class DesiredWeightCalculator {
       this.initialWeight = null;
       this.desiredWeight = null;
 
+      this.startDate = null;
+      this.endDate = null;
+
       this.listenerFunc();
    }
 
@@ -37,20 +40,48 @@ export class DesiredWeightCalculator {
 
    dataValidation(e) {
       e.preventDefault();
+
       const errorAlert = document.querySelector(".appCnt__errorAlertSection");
+
+      const startDateInput = document.querySelector(".appCnt__startDateInput");
+      const endDate = document.querySelector(".appCnt__endDateInput");
       
       this.initialWeight = initialWeightSpan.innerText;
       this.desiredWeight = desiredWeightSpan.innerText;
+      this.startDate = startDateInput.value;
+      this.endDate = endDate.value;
 
       if (this.initialWeight === this.desiredWeight) {
 
          if (errorAlert.classList.contains("appCnt__errorAlertSection")) {
             errorAlert.classList.remove("appCnt__errorAlertSection");
             errorAlert.classList.add("appCnt__errorAlertSectionDisplay");
+         } else {
+            return;
          }
       }
 
       if (this.initialWeight !== this.desiredWeight) {
+
+         const errorAlert = document.querySelector(".appCnt__errorAlertSectionDisplay");
+
+         if (errorAlert.classList.contains("appCnt__errorAlertSectionDisplay")) {
+            errorAlert.classList.remove("appCnt__errorAlertSectionDisplay");
+            errorAlert.classList.add("appCnt__errorAlertSection");
+         }
+      }
+
+      if (this.startDate === this.endDate) {
+
+         if (errorAlert.classList.contains("appCnt__errorAlertSection")) {
+            errorAlert.classList.remove("appCnt__errorAlertSection");
+            errorAlert.classList.add("appCnt__errorAlertSectionDisplay");
+         } else {
+            return;
+         }
+      }
+
+      if (this.startDate !== this.endDate) {
 
          const errorAlert = document.querySelector(".appCnt__errorAlertSectionDisplay");
 
