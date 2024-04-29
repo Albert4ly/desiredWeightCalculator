@@ -19,7 +19,7 @@ export class DesiredWeightCalculator {
 
    listenerFunc() {
       form.addEventListener('click', (e) => this.changeRangeInputValue(e))
-      submitBtn.addEventListener('click', (e) => this.dataValidation(e));
+      submitBtn.addEventListener('click', (e) => this.dataValidation(e),  this.numberOfKgToLoose());
    }
    
    changeRangeInputValue(e) {
@@ -91,6 +91,14 @@ export class DesiredWeightCalculator {
          }
       }
      
+   }
+
+   numberOfKgToLoose() {
+      const kgToLoose = document.querySelector(".appCnt__youWantLoose");
+
+      let numberOfKgToLoose = this.initialWeight - this.desiredWeight;
+      
+      kgToLoose.innerText = numberOfKgToLoose;
    }
 
 }
